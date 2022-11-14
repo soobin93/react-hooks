@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Greeting = ({ initialName }) => {
+const Greeting = ({ initialName = '' }) => {
   const [name, setName] = useState(initialName);
 
   function handleChange(event) {
@@ -24,10 +24,6 @@ const Greeting = ({ initialName }) => {
 
 Greeting.propTypes = {
   initialName: PropTypes.string.isRequired
-};
-
-Greeting.defaultProps = {
-  initialName: ''
 };
 
 const App = () => <Greeting initialName="Soobin" />;
